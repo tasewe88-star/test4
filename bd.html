@@ -1,0 +1,212 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday My Love ❤️</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+    color: white;
+    text-align: center;
+
+    background:
+        linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.65)),
+        url("gf.jpg") center/cover fixed no-repeat;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 90%;
+    max-width: 700px;
+    padding: 35px 25px;
+    border-radius: 30px;
+
+    background: rgba(255,255,255,.12);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    border: 1px solid rgba(255,255,255,.25);
+    box-shadow: 0 20px 60px rgba(0,0,0,.4);
+
+    animation: appear 2s ease;
+}
+
+.small {
+    font-size: 18px;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+}
+
+h1 {
+    font-size: clamp(38px, 9vw, 75px);
+    margin-bottom: 15px;
+    text-shadow: 0 0 20px rgba(255,255,255,.7);
+}
+
+.name {
+    color: #ffb6d9;
+}
+
+.message {
+    font-size: 18px;
+    line-height: 1.7;
+    margin: 20px auto;
+    max-width: 570px;
+}
+
+.love {
+    font-size: 45px;
+    margin: 15px 0;
+    animation: heartbeat 1.3s infinite;
+}
+
+button {
+    border: none;
+    padding: 15px 28px;
+    border-radius: 30px;
+    font-size: 17px;
+    cursor: pointer;
+    color: white;
+    background: rgba(255, 80, 150, .8);
+    box-shadow: 0 8px 25px rgba(255, 50, 130, .35);
+    transition: .3s;
+}
+
+button:hover {
+    transform: scale(1.08);
+    background: rgba(255, 80, 150, 1);
+}
+
+.hidden-message {
+    display: none;
+    margin-top: 25px;
+    font-size: 18px;
+    line-height: 1.7;
+    animation: appear 1s ease;
+}
+
+.heart {
+    position: fixed;
+    bottom: -30px;
+    font-size: 22px;
+    animation: float 6s linear infinite;
+    pointer-events: none;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0;
+    }
+    15% { opacity: 1; }
+    100% {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+@keyframes heartbeat {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.25); }
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="small">FOR THE GIRL I LOVE ❤️</div>
+
+    
+    <h1>Happy Birthday<br>
+        <span class="name">My Love</span> 🎂
+    </h1>
+
+    <div class="love">❤️</div>
+
+    <p class="message">
+        Happy birthday to the most beautiful girl in my world. ❤️
+        I hope today reminds you of how loved, special, and important
+        you really are to me yene konjo i love you so much yene konjo mist ena bedegame enkuna teweledeshe yene miste (yene sethef snap lekeleshalew eshi)
+betma new eshi mafekereshe yene konjo 
+        <br><br>
+        You make my life brighter just by being in it.
+        I’m grateful for every laugh, every conversation,
+        every memory, and every moment I get to spend with you Happy Birthday! I was thinking back on how much we’ve been through and all the moments we’ve shared, and I just feel incredibly lucky that I get to walk through life with you. You make everything brighter, easier, and a whole lot more fun. Thank you for being my biggest supporter, my best friend, and my favorite part of every day. I hope this year brings you everything you’ve been wishing for and more. You deserve all the good things coming your way.
+        😙😙😙😙😙😙😙😙😙😙😙😙😙❤️
+    </p>
+
+    <button onclick="showMessage()">
+        💌 Open My Little Message
+    </button>
+
+    <div class="hidden-message" id="secret">
+       AFEKERSHALEW💕💕<br>
+        AHUNM💖
+        <br><br>
+        DEROM😚😚
+        <br><br>
+        WEDEFITM😍😍
+        <br><br>
+        <strong>ENKUAN TEWELEDESHE YENE MIST ❤️🎂</strong>
+    </div>
+
+</div>
+
+<script>
+
+function showMessage() {
+    document.getElementById("secret").style.display = "block";
+}
+
+/* Floating hearts */
+function createHeart() {
+    const heart = document.createElement("div");
+
+    heart.className = "heart";
+    heart.innerHTML = ["❤️","💕","💗","💖","💘"][Math.floor(Math.random()*5)];
+
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.animationDuration = (4 + Math.random() * 4) + "s";
+    heart.style.fontSize = (15 + Math.random() * 25) + "px";
+
+    document.body.appendChild(heart);
+
+    setTimeout(() => {
+        heart.remove();
+    }, 8000);
+}
+
+setInterval(createHeart, 500);
+
+</script>
+
+</body>
+</html>
+```
